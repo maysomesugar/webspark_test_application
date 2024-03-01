@@ -17,21 +17,38 @@ class MainApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(color: Colors.black),
-          bodyLarge: TextStyle(color: Colors.black),
-        ),
         iconTheme: const IconThemeData(
           color: Colors.grey,
         ),
-        filledButtonTheme: FilledButtonThemeData(
-          style: FilledButton.styleFrom(
-            disabledForegroundColor: Colors.grey.shade900,
-            disabledBackgroundColor: Colors.blue.withOpacity(0.2),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            surfaceTintColor: Colors.transparent,
+            padding: const EdgeInsets.all(
+              20,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            side: const BorderSide(
+              color: Colors.black,
+              width: 1,
+            ),
           ),
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
-        appBarTheme: const AppBarTheme(backgroundColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.blue,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }
